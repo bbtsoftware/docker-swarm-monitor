@@ -11,7 +11,21 @@
 #   
 #   See: https://stackoverflow.com/questions/27176781/bash-file-returns-unexpected-token-do-r
 
+# Output version
+echo -e "\nStarting swarm-monitor ${VERSION} ..."
+
+# Set redirect url
+echo -e "\nSetting redirect url in index.html to 'http://${CHK_URL}' ..."
 sed -i "s|{URL}|${CHK_URL}|g" /usr/share/nginx/html/index.html
+
+echo -e "\nStarting nginx ..."
+/usr/sbin/nginx
+
+echo -e "\nStarting to monitor the following services:"
+for service in $CHK_SERVICES
+do
+    echo "  * ${service%%.*}"
+done
 
 while true;
 do
@@ -36,7 +50,7 @@ do
             ;;
 
         *)
-            output="{ \"Warning\": \"Monitor $CHK_MONITOR is unsupported.\" }"
+            output="{ \"Warning\": \"Monitor '$CHK_MONITOR' is unsupported.\" }"
             ;;
     esac
     
