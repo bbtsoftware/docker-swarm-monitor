@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Script to check if a docker swarm service is running and has the expected amount of instances
-#
-# ! When editing a bash script on a Windows machine you may get the following error on deploying:
-#
-#   /monitor/check.sh: line x: syntax error near unexpected token `$'\r''
-#
-#   The solution is to change the line sequence from `CRLF` to `LF` before save and verify if
-#   the path to the file is in `.gitattributes`.
-#   
-#   See: https://stackoverflow.com/questions/27176781/bash-file-returns-unexpected-token-do-r
-
 # Output version
 echo -e "\nStarting swarm-monitor ${VERSION} ..."
 
