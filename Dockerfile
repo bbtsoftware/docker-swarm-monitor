@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine
+FROM nginx:1.16.0-alpine
 LABEL MAINTAINER = 'BBT Software AG <devadmin@bbtsoftware.ch>'
 
 ENV VERSION 1.0.0
