@@ -4,17 +4,17 @@ This Docker image allows to monitor a [Docker Swarm](https://docs.docker.com/eng
 
 ## Information
 
-| Service       | Stats                                                                                     |
-|---------------|-------------------------------------------------------------------------------------------|
-| Docker        | [![Build](https://img.shields.io/docker/cloud/build/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor/builds) [![Pulls](https://img.shields.io/docker/pulls/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor) [![Stars](https://img.shields.io/docker/stars/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor) [![Automated](https://img.shields.io/docker/cloud/automated/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftware/docker-swarm/builds) |
-| GitHub        | [![Last commit](https://img.shields.io/github/last-commit/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/commits/master) [![Issues](https://img.shields.io/github/issues-raw/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-warm-monitor/issues) [![PR](https://img.shields.io/github/issues-pr-raw/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/pulls) [![Size](https://img.shields.io/github/repo-size/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/bbtsoftware/docker-swarm-monitor/blob/master/LICENSE) |
+| Service | Stats                                                                                     |
+|---------|-------------------------------------------------------------------------------------------|
+| Docker  | [![Build](https://img.shields.io/docker/cloud/build/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor/builds) [![Pulls](https://img.shields.io/docker/pulls/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor) [![Stars](https://img.shields.io/docker/stars/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor) [![Automated](https://img.shields.io/docker/cloud/automated/bbtsoftwareag/swarm-monitor.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftware/docker-swarm/builds) |
+| GitHub  | [![Last commit](https://img.shields.io/github/last-commit/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/commits/master) [![Issues](https://img.shields.io/github/issues-raw/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-warm-monitor/issues) [![PR](https://img.shields.io/github/issues-pr-raw/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/pulls) [![Size](https://img.shields.io/github/repo-size/bbtsoftware/docker-swarm-monitor.svg?style=flat-square)](https://github.com/bbtsoftware/docker-swarm-monitor/) [![License](http://img.shields.io/:license-mit-blue.svg)](https://github.com/bbtsoftware/docker-swarm-monitor/blob/master/LICENSE) |
 
 ## General
 
-| Topic     | Description                                                                                   |
-|-----------|-----------------------------------------------------------------------------------------------|
-| Image     | See [Docker Hub](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor).                  |
-| Source    | See [GitHub](https://github.com/bbtsoftware/docker-swarm-monitor).                            |
+| Topic  | Description                                                             |
+|--------|-------------------------------------------------------------------------|
+| Image  | See [Docker Hub](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor). |
+| Source | See [GitHub](https://github.com/bbtsoftware/docker-swarm-monitor).      |
 
 ## Installation
 
@@ -24,9 +24,10 @@ docker pull bbtsoftwareag/swarm-monitor
 
 ### Supported tags
 
-| Tag    | Description   | Size                                                                                                                                                                            |
-|--------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| latest | Latest stable | [![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/latest.svg?style=flat-square)](https://hub.docker.com/r/bbtsoftwareag/swarm-monitor/tags) |
+| Tag    | Description                                                                             | Size                                                                                                                   |
+|--------|-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
+| latest | Latest master build                                                                     | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/latest.svg?style=flat-square) |
+| 1.0.0  | Release [1.0.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.0.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.0.0.svg?style=flat-square)  |
 
 ### Volumes
 
