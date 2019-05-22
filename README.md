@@ -45,7 +45,7 @@ docker pull bbtsoftwareag/swarm-monitor
 
 These environment variables are supported:
 
-| ENV field              | Values                | Description                                                                                                                       |
+| ENV field              | Example values        | Description                                                                                                                       |
 |------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | TZ                     | `Europe/Zurich`       | Timezone to set.                                                                                                                  |
 | CHK_URL                | `monitor.tempuri.org` | Base url to use for nginx redirect. This will be set to `http://{CHK_URL}/status.json`.                                           |
