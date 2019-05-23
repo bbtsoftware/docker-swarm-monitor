@@ -1,23 +1,40 @@
 #!/bin/bash
 
-# Output version
-echo -e "\nStarting swarm-monitor ${VERSION} ..."
+initialize () {
+    echo
+    echo "swarm-monitor ${VERSION}"
+}
 
-# Set redirect url
-echo -e "\nSetting redirect url in index.html to 'http://${CHK_URL}' ..."
-sed -i "s|{URL}|${CHK_URL}|g" /usr/share/nginx/html/index.html
+set_redirect_url () {
+    echo
+    echo "Setting redirect url in index.html to 'http://${CHK_URL}/status.json' ..."
+    sed -i "s|{URL}|${CHK_URL}|g" /usr/share/nginx/html/index.html
+    echo " ... done."
+}
 
-echo -e "\nStarting nginx ..."
-/usr/sbin/nginx
+start_http () {
+    echo
+    echo "Starting nginx ..."
+    /usr/sbin/nginx > /dev/null 2>&1
+    RETVAL=$?
 
-echo -e "\nStarting to monitor the following services:"
-for service in $CHK_SERVICES
-do
-    echo "  * ${service%%.*}"
-done
+    if [ "$RETVAL" = "0" ]; then
+        echo " ... done."
+    else
+        echo " ... failed!"
+    fi
+}
 
-while true;
-do
+show_services () {
+    echo
+    echo "Starting to monitor the following services:"
+    for service in $CHK_SERVICES
+    do
+        echo " * ${service%%.*}"
+    done
+}
+
+check_services () {
     case $CHK_MONITOR in
         "prtg")
             output="{ \"prtg\": { \"result\": ["
@@ -44,6 +61,21 @@ do
     esac
     
     echo $output | jq '.' > /usr/share/nginx/html/status.json
-    
+}
+
+initialize
+
+set_redirect_url
+
+start_http
+
+show_services
+
+echo
+
+while :
+do
+    check_services
+
     sleep $CHK_INTERVAL
 done
