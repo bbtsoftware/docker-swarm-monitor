@@ -1,5 +1,5 @@
 FROM nginx:1.16.0-alpine
-LABEL MAINTAINER = 'BBT Software AG <devadmin@bbtsoftware.ch>'
+LABEL MAINTAINER="BBT Software AG <devadmin@bbtsoftware.ch>"
 
 ENV VERSION 1.0.0
 
@@ -11,12 +11,15 @@ ENV CHK_SERVICES sample.1
 
 ENV TZ UTC
 
-COPY ./entrypoint.sh /entrypoint.sh
-COPY ./index.html /usr/share/nginx/html/index.html
+COPY index.html /usr/share/nginx/html/index.html
 
 RUN apk add --no-cache bash curl jq && \
-  echo $TZ > /etc/timezone
+    echo $TZ > /etc/timezone
+
+COPY docker-entrypoint.sh /usr/local/bin/
+ENTRYPOINT ["docker-entrypoint.sh"]
 
 EXPOSE 80
 
-ENTRYPOINT ["bash","/entrypoint.sh"]
+HEALTHCHECK --interval=1m --timeout=3s \
+    CMD curl -f http://localhost/status.json || exit 1
