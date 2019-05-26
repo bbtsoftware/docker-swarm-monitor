@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 initialize () {
     echo
@@ -44,7 +44,7 @@ check_services () {
                 service="${service%%.*}"
 
                 check=$(curl -sg --unix-socket /var/run/docker.sock http://$CHK_DOCKER_API_VERSION/tasks?filters={%22service%22:[%22$service%22]} | jq '.[]? | select((.Status.State|index("running")>=0))? | .ID?' | wc -l)
-                
+
                 state="0"
                 if [ $check = $expected ]; then
                     state="1"
@@ -59,7 +59,7 @@ check_services () {
             output="{ \"Warning\": \"Monitor '$CHK_MONITOR' is unsupported.\" }"
             ;;
     esac
-    
+
     echo $output | jq '.' > /usr/share/nginx/html/status.json
 }
 
