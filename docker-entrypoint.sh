@@ -1,10 +1,5 @@
 #!/bin/sh
 
-initialize () {
-    echo
-    echo "swarm-monitor ${VERSION}"
-}
-
 set_redirect_url () {
     echo
     echo "Setting redirect url in index.html to 'http://${CHK_URL}/status.json' ..."
@@ -62,8 +57,6 @@ check_services () {
 
     echo $output | jq '.' > /usr/share/nginx/html/status.json
 }
-
-initialize
 
 set_redirect_url
 
