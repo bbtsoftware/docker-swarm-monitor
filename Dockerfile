@@ -1,4 +1,4 @@
-FROM nginx:1.17.1-alpine
+FROM nginx:1.17.2-alpine
 LABEL MAINTAINER="BBT Software AG <devadmin@bbtsoftware.ch>"
 
 ENV CHK_URL monitor.tempuri.org
