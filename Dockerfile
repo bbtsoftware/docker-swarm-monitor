@@ -1,7 +1,6 @@
 FROM nginx:1.17.3-alpine
 LABEL MAINTAINER="BBT Software AG <devadmin@bbtsoftware.ch>"
 
-ENV CHK_URL monitor.tempuri.org
 ENV CHK_DOCKER_API_VERSION v1.38
 ENV CHK_INTERVAL 60
 ENV CHK_MONITOR prtg
