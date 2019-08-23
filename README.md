@@ -28,6 +28,7 @@ docker pull bbtsoftwareag/swarm-monitor
 |--------|-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | latest | Latest master build                                                                     | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/latest.svg?style=flat-square) |
 | 1.0.0  | Release [1.0.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.0.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.0.0.svg?style=flat-square)  |
+| 1.1.0  | Release [1.1.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.1.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.1.0.svg?style=flat-square)  |
 
 ### Volumes
 
