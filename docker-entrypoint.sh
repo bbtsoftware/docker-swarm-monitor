@@ -1,12 +1,5 @@
 #!/bin/sh
 
-set_redirect_url () {
-    echo
-    echo "Setting redirect url in index.html to 'http://${CHK_URL}/status.json' ..."
-    sed -i "s|{URL}|${CHK_URL}|g" /usr/share/nginx/html/index.html
-    echo " ... done."
-}
-
 start_http () {
     echo
     echo "Starting nginx ..."
@@ -57,8 +50,6 @@ check_services () {
 
     echo $output | jq '.' > /usr/share/nginx/html/status.json
 }
-
-set_redirect_url
 
 start_http
 

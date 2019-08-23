@@ -48,7 +48,6 @@ These environment variables are supported:
 | ENV field              | Example values        | Description                                                                                                                       |
 |------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | TZ                     | `Europe/Zurich`       | Timezone to set.                                                                                                                  |
-| CHK_URL                | `monitor.tempuri.org` | Base url to use for nginx redirect. This will be set to `http://{CHK_URL}/status.json`.                                           |
 | CHK_DOCKER_API_VERSION | `v1.38`               | Docker API version to use. Default is `v1.38`.                                                                                    |
 | CHK_INTERVAL           | `60`                  | Interval for check in seconds. Default is `60`.                                                                                   |
 | CHK_MONITOR            | `prtg`                | Used monitoring. Defines the format of the `status.json`. Currently supported is `prtg`.                                          |
@@ -70,7 +69,6 @@ services:
       - 80:80
     environment:
       - TZ=Europe/Zurich
-      - CHK_URL=monitor.tempuri.org
       - CHK_DOCKER_API_VERSION=v1.38
       - CHK_INTERVAL=60
       - CHK_MONITOR=prtg
@@ -88,7 +86,6 @@ docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
   -p 80:80 \
   -e TZ=Europe/Zurich \
-  -e CHK_URL=monitor.tempuri.org \
   -e CHK_DOCKER_API_VERSION=v1.38 \
   -e CHK_INTERVAL=60 \
   -e CHK_MONITOR=prtg \
