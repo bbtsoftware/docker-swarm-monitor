@@ -38,7 +38,7 @@ check_services () {
                     state="1"
                 fi
 
-                output="$output { \"channel\": \"$service\", \"value\": \"$state\" },"
+                output="$output { \"channel\": \"$service\", \"value\": \"$state\", \"limitmode\": 1, \"limitminerror\": \"1\", \"limitmaxerror\": \"1\" },"
             done
             output="$output { \"channel\": \"updated\", \"value\": \"$(date +%s)\", \"showchart\": 0, \"showtable\": 0 } ] } }"
             ;;
