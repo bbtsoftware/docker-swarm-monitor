@@ -40,7 +40,7 @@ check_services () {
 
                 output="$output { \"channel\": \"$service\", \"value\": \"$state\" },"
             done
-            output="$output { \"channel\": \"updated\", \"value\": \"$(date +%s)\" } ] } }"          
+            output="$output { \"channel\": \"updated\", \"value\": \"$(date +%s)\", \"showchart\": 0, \"showtable\": 0 } ] } }"
             ;;
 
         *)
