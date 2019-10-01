@@ -2,6 +2,10 @@
 
 Docker image to monitor a [Docker Swarm](https://docs.docker.com/engine/swarm/).
 
+Supported monitoring systems:
+
+* [PRTG Network Monitor](https://www.paessler.com/prtg/)
+
 ## Information
 
 | Service | Stats                                                                                     |
