@@ -45,7 +45,7 @@ docker pull bbtsoftwareag/swarm-monitor
 
 | Port | Protocol | Description                          |
 |------|----------|--------------------------------------|
-|   80 | TCP      | Web-UI which provides `status.json`. |
+| 8080 | TCP      | Web-UI which provides `status.json`. |
 
 ### Configuration
 
@@ -72,7 +72,7 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     ports:
-      - 80:80
+      - 80:8080
     environment:
       - TZ=Europe/Zurich
       - CHK_DOCKER_API_VERSION=v1.38
@@ -90,7 +90,7 @@ services:
 ```sh
 docker run -d \
   -v /var/run/docker.sock:/var/run/docker.sock \
-  -p 80:80 \
+  -p 80:8080 \
   -e TZ=Europe/Zurich \
   -e CHK_DOCKER_API_VERSION=v1.38 \
   -e CHK_INTERVAL=60 \
