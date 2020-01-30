@@ -8,6 +8,9 @@ ENV CHK_SERVICES sample.1
 
 ENV TZ UTC
 
+RUN adduser -u 9999 monitor -D
+USER monitor
+
 COPY index.html /usr/share/nginx/html/index.html
 
 RUN apk add --no-cache bash curl jq && \
