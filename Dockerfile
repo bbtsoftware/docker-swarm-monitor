@@ -21,7 +21,7 @@ COPY docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 80
+EXPOSE 8080
 
 HEALTHCHECK --interval=1m --timeout=3s \
-    CMD curl -f http://localhost/status.json || exit 1
+    CMD curl -f http://localhost:8080/status.json || exit 1
