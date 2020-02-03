@@ -53,6 +53,7 @@ These environment variables are supported:
 
 | ENV field              | Example values        | Description                                                                                                                       |
 |------------------------|-----------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| DOCKER_GID             | `1101`                | ID of the group running the Docker daemon on the host, typically ID of the `docker` group. Default is `1101`.                     |
 | TZ                     | `Europe/Zurich`       | Timezone to set.                                                                                                                  |
 | CHK_DOCKER_API_VERSION | `v1.38`               | Docker API version to use. Default is `v1.38`.                                                                                    |
 | CHK_INTERVAL           | `60`                  | Interval for check in seconds. Default is `60`.                                                                                   |

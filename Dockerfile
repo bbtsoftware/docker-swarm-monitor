@@ -7,10 +7,12 @@ ENV CHK_MONITOR prtg
 ENV CHK_SERVICES sample.1
 
 ENV TZ UTC
+ENV DOCKER_GID 1101
 
 COPY index.html /usr/share/nginx/html/index.html
 
 USER root
+RUN addgroup -g $DOCKER_GID 101
 RUN chmod 775 /usr/share/nginx/html/
 RUN chown nginx:nginx /usr/share/nginx/html/
 RUN apk add --no-cache bash curl jq && \
