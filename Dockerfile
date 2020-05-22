@@ -1,4 +1,4 @@
-FROM nginx:1.17.8-alpine
+FROM nginx:1.17.10-alpine
 LABEL MAINTAINER="BBT Software AG <opensource@bbtsoftware.ch>"
 
 ENV CHK_DOCKER_API_VERSION v1.38
