@@ -1,5 +1,5 @@
 FROM nginxinc/nginx-unprivileged:1.17.8-alpine
-LABEL MAINTAINER="BBT Software AG <devadmin@bbtsoftware.ch>"
+LABEL MAINTAINER="BBT Software AG <opensource@bbtsoftware.ch>"
 
 ENV CHK_DOCKER_API_VERSION v1.38
 ENV CHK_INTERVAL 60
