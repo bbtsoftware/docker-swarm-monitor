@@ -1,4 +1,4 @@
-FROM nginxinc/nginx-unprivileged:1.17.8-alpine
+FROM nginx:1.17.8-alpine
 LABEL MAINTAINER="BBT Software AG <opensource@bbtsoftware.ch>"
 
 ENV CHK_DOCKER_API_VERSION v1.38
@@ -10,18 +10,14 @@ ENV TZ UTC
 
 COPY index.html /usr/share/nginx/html/index.html
 
-USER root
-RUN chmod 775 /usr/share/nginx/html/
-RUN chown nginx:nginx /usr/share/nginx/html/
 RUN apk add --no-cache bash curl jq && \
     echo $TZ > /etc/timezone
-USER nginx
 
 COPY docker-entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
-EXPOSE 8080
+EXPOSE 80
 
 HEALTHCHECK --interval=1m --timeout=3s \
-    CMD curl -f http://localhost:8080/status.json || exit 1
+    CMD curl -f http://localhost/status.json || exit 1
