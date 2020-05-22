@@ -1,5 +1,5 @@
-FROM nginxinc/nginx-unprivileged:1.17.8-alpine
-LABEL MAINTAINER="BBT Software AG <devadmin@bbtsoftware.ch>"
+FROM nginx:1.17.10-alpine
+LABEL MAINTAINER="BBT Software AG <opensource@bbtsoftware.ch>"
 
 ENV CHK_DOCKER_API_VERSION v1.38
 ENV CHK_INTERVAL 60
@@ -10,12 +10,8 @@ ENV TZ UTC
 
 COPY index.html /usr/share/nginx/html/index.html
 
-USER root
-RUN chmod 775 /usr/share/nginx/html/
-RUN chown nginx:nginx /usr/share/nginx/html/
 RUN apk add --no-cache bash curl jq && \
     echo $TZ > /etc/timezone
-USER nginx
 
 COPY docker-entrypoint.sh /usr/local/bin/
 

@@ -31,6 +31,7 @@ docker pull bbtsoftwareag/swarm-monitor
 | Tag    | Description                                                                             | Size                                                                                                                   |
 |--------|-----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|
 | latest | Latest master build                                                                     | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/latest.svg?style=flat-square) |
+| 1.3.0  | Release [1.3.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.3.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.3.0.svg?style=flat-square)  |
 | 1.2.0  | Release [1.2.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.2.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.2.0.svg?style=flat-square)  |
 | 1.1.0  | Release [1.1.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.1.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.1.0.svg?style=flat-square)  |
 | 1.0.0  | Release [1.0.0](https://github.com/bbtsoftware/docker-swarm-monitor/releases/tag/1.0.0) | ![Size](https://shields.beevelop.com/docker/image/image-size/bbtsoftwareag/swarm-monitor/1.0.0.svg?style=flat-square)  |
@@ -45,7 +46,7 @@ docker pull bbtsoftwareag/swarm-monitor
 
 | Port | Protocol | Description                          |
 |------|----------|--------------------------------------|
-|   80 | TCP      | Web-UI which provides `status.json`. |
+| 80   | TCP      | Web-UI which provides `status.json`. |
 
 ### Configuration
 
