@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This repository has been archived and is no longer actively maintained.
+> No further updates or support are planned.
+
 # Docker Swarm monitor
 
 Docker image to monitor a [Docker Swarm](https://docs.docker.com/engine/swarm/).
